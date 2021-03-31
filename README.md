@@ -14,4 +14,4 @@ Solution for a project from [LeonidasEsteban.com](LeonidasEsteban.com)
 
 ## Overview 🔖
 
-![Img overview project]()
+![Img overview project](https://yadurani.github.io/artist/images/thumbnail-artliston.jpg)
