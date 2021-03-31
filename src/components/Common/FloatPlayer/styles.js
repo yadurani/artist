@@ -16,10 +16,10 @@ export const PlayerWrapper = styled.div`
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  @media(max-width: 560px) {
+  @media (max-width: 560px) {
     position: static;
     padding: 40px 30px;
-    width: 84%;
+    width: calc(100% - 60px);
   }
 `
 
@@ -38,7 +38,7 @@ export const MuteButton = styled.button`
   padding-left: 1rem;
   cursor: pointer;
   align-self: flex-end;
-  &:focus { 
+  &:focus {
     outline: none;
   }
 `
