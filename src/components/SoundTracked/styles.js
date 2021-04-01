@@ -21,6 +21,7 @@ export const SoundTrackWrapper = styled.section`
 export const SoundTrackText = styled.article`
   @media (max-width: 960px) {
     grid-row: 2;
+    position: relative;
   }
 `
 

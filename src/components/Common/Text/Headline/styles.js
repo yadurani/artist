@@ -16,14 +16,14 @@ export const HeadlineOne = styled.h2`
 `
 export const HeadlineTwo = styled.h3`
   font-size: ${({ theme }) => theme.sizes.xxxl.size};
-  @media(max-width: 560px) {
+  @media (max-width: 560px) {
     font-size: ${({ theme }) => theme.sizes.xl.size};
   }
 `
 export const HeadlineThree = styled.h3`
   font-size: ${({ theme }) => theme.sizes.xxl.size};
   color: ${({ secondary, theme }) => secondary && theme.colors.secondary.main};
-  @media(max-width: 560px) {
+  @media (max-width: 560px) {
     font-size: ${({ theme }) => theme.sizes.xl.size};
   }
 `
@@ -47,5 +47,19 @@ export const HeadlineOutlineSecond = styled.h3`
   }
   @media (max-width: 320px) {
     font-size: 3rem;
+  }
+`
+export const HeadlineOutlineThree = styled.h3`
+  font-size: ${({ theme }) => theme.sizes.xxxl.size};
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  text-transform: uppercase;
+  @media (max-width: 1280px) {
+    font-size: ${({ theme }) => theme.sizes.xxl.size};
+  }
+  @media (max-width: 960px) {
+    font-size: ${({ theme }) => theme.sizes.xl.size};
+    -webkit-text-fill-color: white;
   }
 `

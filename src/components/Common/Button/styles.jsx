@@ -9,7 +9,7 @@ export const ButtonWrapper = styled.button`
   line-height: ${({ theme }) => theme.sizes.xl.line};
   padding: 24px 56px;
   @media (max-width: 560px) {
-    padding:6px 24px;
+    padding: 6px 24px;
     font-size: ${({ theme }) => theme.sizes.sm.size};
   }
   ${({ primary }) =>
@@ -20,7 +20,7 @@ export const ButtonWrapper = styled.button`
       &:hover {
         background: ${({ theme }) => theme.colors.secondary.dark};
         @media (max-width: 768px) {
-          background: initial;
+          background: ${({ theme }) => theme.colors.secondary.main};
         }
       }
       &:focus {
@@ -52,6 +52,7 @@ export const ButtonWrapper = styled.button`
         color: ${({ theme }) => theme.colors.primary};
         @media (max-width: 768px) {
           background: initial;
+          color: ${({ theme }) => theme.colors.grey};
         }
       }
       &:focus {

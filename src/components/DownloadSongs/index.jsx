@@ -1,17 +1,17 @@
 import React from 'react'
 import data from '../../constants/initialState'
 import {
-  DownloadImg,
+  DownloadItemWrapper,
   DownloadWrapper,
   SectionWrapper,
   SubHeader,
-  DownloadItem,
 } from './styles'
 import { HeadlineBase } from '../Common/Text/Headline/styles'
 import { Headline2 } from '../Common/Text/Headline'
 import { Body1 } from '../Common/Text/Body'
 import { BodyBase } from '../Common/Text/Body/styles'
 import { TitleDownload } from '../Common/CompositeText'
+import DownloadSongsItem from './DownloadSongsItem'
 
 const DownloadSongs = () => {
   return (
@@ -24,10 +24,10 @@ const DownloadSongs = () => {
         />
       </SubHeader>
       <DownloadWrapper>
-        {data.songs?.map((song, i) => (
-          <DownloadItem key={i}>
-            <DownloadImg src={song.img} />
-          </DownloadItem>
+        {data?.songs?.map((song, i) => (
+          <DownloadItemWrapper key={song.img + i}>
+            <DownloadSongsItem {...song} />
+          </DownloadItemWrapper>
         ))}
       </DownloadWrapper>
     </SectionWrapper>

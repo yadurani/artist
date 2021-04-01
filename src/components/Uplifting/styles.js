@@ -58,22 +58,24 @@ export const UpliftingGallery = styled.article`
 export const UpliftingGalleryWrapper = styled.div`
   display: grid;
   justify-content: center;
-  grid-template-columns: minmax(150px, 328px) minmax(106px, 226px) minmax(
-      140px,
-      239px
-    ) minmax(145px, 275px) minmax(160px, 239px);
+  grid-template-columns:
+    minmax(150px, 328px) minmax(106px, 226px) minmax(140px, 239px)
+    minmax(145px, 275px) minmax(160px, 239px);
   margin-top: -6.6rem;
   position: relative;
   @media (max-width: 960px) {
     margin-top: -6rem;
   }
   @media (max-width: 560px) {
-    margin-top: -2.8rem;
+    margin-top: -3.5rem;
     grid-template-columns: minmax(110px, 134px) minmax(90px, 112px);
     grid-gap: 0 20%;
     img:last-child {
       display: none;
     }
+  }
+  @media (max-width: 320px) {
+    margin-top: -3rem;
   }
 `
 

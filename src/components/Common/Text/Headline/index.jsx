@@ -6,6 +6,7 @@ import {
   HeadlineFour,
   HeadlineFive,
   HeadlineOutlineSecond,
+  HeadlineOutlineThree,
 } from './styles'
 
 export const Headline1 = ({ text, ...props }) => (
@@ -30,4 +31,8 @@ export const Headline5 = ({ text, ...props }) => (
 
 export const HeadlineOutline2 = ({ text, ...props }) => (
   <HeadlineOutlineSecond {...props}>{text}</HeadlineOutlineSecond>
+)
+
+export const HeadlineOutline3 = ({ text, ...props }) => (
+  <HeadlineOutlineThree {...props}>{text}</HeadlineOutlineThree>
 )
