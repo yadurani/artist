@@ -43,6 +43,9 @@ export const SlideOverlay = styled.div`
   transition: opacity ease 0.5s;
   visibility: hidden;
   opacity: 0;
+  @media (max-width: 560px) {
+    display: none;
+  }
 `
 export const SlideWrapper = styled.div`
   width: ${({ width }) => width}px;

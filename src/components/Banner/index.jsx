@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../../context/AppContext'
 import Button from '../Common/Button'
 import { Headline1, Headline2, Headline3 } from '../Common/Text/Headline'
 import { HeadlineBase } from '../Common/Text/Headline/styles'
@@ -10,6 +11,11 @@ import {
 } from './styles'
 
 const Banner = () => {
+  const { songsRef } = useContext(AppContext)
+
+  const handleDown = () =>
+    songsRef?.current.scrollIntoView({ behavior: 'smooth' })
+
   return (
     <BannerWrapper>
       <BannerNumberBig>
@@ -19,7 +25,7 @@ const Banner = () => {
         <BannerTextContent>
           <HeadlineBase as={Headline3} text="2020" mt={0} secondary />
           <HeadlineBase as={Headline2} text="Your year as an Artlist Creator" />
-          <Button text="PLAY" primary />
+          <Button text="PLAY" primary onClick={handleDown} />
         </BannerTextContent>
       </BannerText>
     </BannerWrapper>

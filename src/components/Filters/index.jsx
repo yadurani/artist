@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { Headline3 } from '../Common/Text/Headline'
 import { HeadlineBase } from '../Common/Text/Headline/styles'
 import {
@@ -21,7 +21,6 @@ import useResize from '../../hooks/useResize'
 import Icon from '../Common/Icon'
 
 const Filters = () => {
-  const [play, setPlay] = useState(true)
   const imgWidth = useRef()
   const {
     state,
@@ -47,7 +46,7 @@ const Filters = () => {
           {sliderFilters?.map((slide, i) => (
             <SlideWrapper key={slide.img + i} width={width}>
               <SlideOverlay>
-                <ButtonPlay isRing={play} onClick={() => setPlay(!play)} />
+                <ButtonPlay isRing={false} />
               </SlideOverlay>
               <SlideImage src={slide.img} alt="" ref={imgWidth} />
             </SlideWrapper>
@@ -64,10 +63,16 @@ const Filters = () => {
             ))}
           </SliderDotsList>
           <SliderArrows>
-            <ArrowButton onClick={backSlide} disabled={disabledBack}>
+            <ArrowButton
+              onClick={backSlide}
+              disabled={disabledBack}
+              ariaLabel="back">
               <Icon name="back" />
             </ArrowButton>
-            <ArrowButton onClick={nextSlide} disabled={disabledNext}>
+            <ArrowButton
+              ariaLabel="next"
+              onClick={nextSlide}
+              disabled={disabledNext}>
               <Icon name="next" />
             </ArrowButton>
           </SliderArrows>

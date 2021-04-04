@@ -26,7 +26,7 @@ const Uplifting = () => (
       <HeadlineBase as={HeadlineOutline2} text="Uplifting" />
       <UpliftingGalleryWrapper>
         {uplifting?.map((post, i) => (
-          <UpliftingGalleryImg src={post.img} key={i} />
+          <UpliftingGalleryImg src={post.img} key={i} alt={post.img} />
         ))}
       </UpliftingGalleryWrapper>
     </UpliftingGallery>

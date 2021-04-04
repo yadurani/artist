@@ -10,6 +10,7 @@ export const ButtonPlayWrapper = styled.button`
   justify-items: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
   &:focus {
     outline: none;
   }

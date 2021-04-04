@@ -5,7 +5,7 @@ import { HeadlineOutline3 } from '../Common/Text/Headline'
 import { HeadlineBase } from '../Common/Text/Headline/styles'
 import { DownloadImg, DownloadItem, DownloadOverlay } from './styles'
 
-const DownloadSongsItem = ({ img, title }) => {
+const DownloadSongsItem = ({ img, title, onClick, hasPlaying }) => {
   const [show, el] = useNearScreen()
   return (
     <DownloadItem ref={el}>
@@ -13,9 +13,9 @@ const DownloadSongsItem = ({ img, title }) => {
         <>
           <DownloadOverlay>
             <HeadlineBase as={HeadlineOutline3} text={title}></HeadlineBase>
-            <ButtonPlay />
+            <ButtonPlay isRing={hasPlaying} onClick={onClick} />
           </DownloadOverlay>
-          <DownloadImg src={img} />
+          <DownloadImg src={img} alt={title} />
         </>
       )}
     </DownloadItem>

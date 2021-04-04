@@ -1,4 +1,5 @@
 import React from 'react'
+import useIntersection from '../../hooks/useIntersection'
 import { ParagraphSound } from '../Common/CompositeText'
 import { Body1 } from '../Common/Text/Body'
 import { BodyBase } from '../Common/Text/Body/styles'
@@ -16,8 +17,9 @@ import {
 } from './styles'
 
 const SoundTrack = () => {
+  const [show, el] = useIntersection()
   return (
-    <SoundTrackWrapper>
+    <SoundTrackWrapper ref={el}>
       <SoundTrackText>
         <HeadlineBase
           as={Headline2}
@@ -27,21 +29,27 @@ const SoundTrack = () => {
         <BodyBase as={Body1} text={<ParagraphSound />} mb={1.5} />
         <SoundTrackImages>
           <SoundTrackPicture>
-            <SoundTrackSource srcset="images/card-4.jpg (max-width: 560px)" />
+            <SoundTrackSource
+              srcset="images/card-4.jpg (max-width: 560px)"
+              alt="Imagen 1"
+            />
             <SoundTrackImg src="images/card-6.jpg" alt="Imagen 1" />
           </SoundTrackPicture>
           <SoundTrackPicture>
-            <SoundTrackSource srcset="images/card-6.jpg (max-width: 560px)" />
-            <SoundTrackImg src="images/card-5.jpg" alt="Imagen 1" />
+            <SoundTrackSource
+              srcset="images/card-6.jpg (max-width: 560px)"
+              alt="Imagen 2"
+            />
+            <SoundTrackImg src="images/card-5.jpg" alt="Imagen 2" />
           </SoundTrackPicture>
           <SoundTrackPicture>
-            <SoundTrackImg src="images/card-1.jpg" alt="Imagen 1" />
+            <SoundTrackImg src="images/card-1.jpg" alt="Imagen 3" />
           </SoundTrackPicture>
         </SoundTrackImages>
       </SoundTrackText>
       <SoundTrackRight>
-        <SoundTrackBg>
-          <SoundTrackImg src="images/elipse-soundtrack.png" />
+        <SoundTrackBg show={show}>
+          <SoundTrackImg src="images/elipse-soundtrack.png" alt="Imagen 4" />
         </SoundTrackBg>
       </SoundTrackRight>
     </SoundTrackWrapper>

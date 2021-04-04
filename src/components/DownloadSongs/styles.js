@@ -63,7 +63,7 @@ export const DownloadImg = styled.img`
 
 export const DownloadOverlay = styled.div`
   ${fadeIn};
-  background: rgba(11, 11, 11, 0.5);
+  background: rgba(11, 11, 11, 0.65);
   bottom: 0;
   content: '';
   left: 0;
@@ -101,11 +101,11 @@ export const DownloadItemWrapper = styled.div`
         margin: 0;
         height: 70px;
         overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
         line-clamp: 2;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
       }
     }
   }

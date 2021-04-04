@@ -1,5 +1,18 @@
 import { css, keyframes } from 'styled-components'
 
+export const soundKeyFrames = keyframes`
+  0% {
+    opacity: .35;
+    transform: scaleY(0.3); 
+    transform-origin: center bottom;
+  }
+  100% {
+    opacity: 1;       
+    transform: scaleY(1); 
+    transform-origin: center bottom;    
+  }
+`
+
 const gradientKeyFrames = keyframes`
   0% {
     transform: translateX(100px);

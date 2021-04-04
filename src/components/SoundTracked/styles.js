@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { gradient } from '../../styled/animation'
 
 export const SoundTrackWrapper = styled.section`
@@ -64,7 +64,11 @@ export const SoundTrackBg = styled.div`
     position: absolute;
     opacity: 0.5;
     transition: opacity 1s ease-in-out;
-    ${gradient}
+    ${({ show }) =>
+      show &&
+      css`
+        ${gradient}
+      `}
   }
 `
 export const SoundTrackImages = styled.div`

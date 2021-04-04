@@ -17,10 +17,14 @@ const FloatPlayer = () => {
   const action = hasPlaying ? 'Pause' : 'Play'
   const nameIconPlay = hasPlaying ? 'pause' : 'playFill'
   const nameIconVolume = hasVolume ? 'volume' : 'mute'
+  const nameClassSound = hasPlaying ? 'sound' : null
   return (
     <PlayerWrapper>
-      <Icon name="frame" />
-      <PlayerButton type="button" title={action} onClick={playingAudio}>
+      <Icon name="frame" className={nameClassSound} />
+      <PlayerButton
+        type="button"
+        title={action}
+        onClick={() => playingAudio({})}>
         <Icon name={nameIconPlay} />
       </PlayerButton>
       <BodyBase as={Body1} text={mediaCurrent.name} />

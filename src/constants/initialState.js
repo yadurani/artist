@@ -1,21 +1,50 @@
 export default {
   mediaCurrent: {
-    audio: 'audio/loop-medolic.mp3',
-    name: 'D fine us / Howling at the moon',
+    id: 1,
+    audio: 'audio/growth.mp3',
+    name: 'Background Loop Medolic Techno',
     isPlaying: false,
   },
 }
 
 export const songs = [
-  { img: 'images/card-2.jpg', title: 'D FINE US / HOWLING AT THE MOON' },
-  { img: 'images/card-3.jpg', title: 'ANTON  VLAASOV / OVERDRIVE' },
-  { img: 'images/card-4.jpg', title: 'IAN POST / CLOSE YOUR EYES AND' },
   {
-    img: 'images/card-6.jpg',
-    title: 'REX BANNER / MILLENNIAL UPLIFTING BANGERS',
+    id: 2,
+    img: 'images/card-2.jpg',
+    title: 'D fine us / Howling at the moon',
+    audio: 'audio/cali.mp3',
   },
-  { img: 'images/card-1.jpg', title: 'OFRIN / TAKE IT TO THE TOP' },
+  {
+    id: 3,
+    img: 'images/card-3.jpg',
+    title: 'Anton Vlaasov / Overdrive',
+    audio: 'audio/breeze.mp3',
+  },
+  {
+    id: 4,
+    img: 'images/card-4.jpg',
+    title: 'Ian Post / Close your eyes and',
+    audio: 'audio/surface.mp3',
+  },
+  {
+    id: 5,
+    img: 'images/card-6.jpg',
+    title: 'Rex Banner / Millenial Uplifting Bangers',
+    audio: 'audio/sun-back.mp3',
+  },
+  {
+    id: 6,
+    img: 'images/card-1.jpg',
+    title: 'Ofrin / Take it to the top',
+    audio: 'audio/loop-medolic.mp3',
+  },
 ]
+
+export const mainSong = {
+  id: 1,
+  title: 'Background Loop Medolic Techno',
+  audio: 'audio/growth.mp3',
+}
 
 export const uplifting = [
   { img: 'images/card-4.jpg' },

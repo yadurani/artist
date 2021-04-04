@@ -1,9 +1,10 @@
 import React from 'react'
 import icons from './icons'
 
-const Icon = ({ name, width, height, color }) =>
+const Icon = ({ name, width, height, color, ...props }) =>
   name && (
     <svg
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width={width || icons[name].width}
       height={height || icons[name.height]}

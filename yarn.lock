@@ -9061,6 +9061,11 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-circular-input@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/react-circular-input/-/react-circular-input-0.2.3.tgz#8c2b64ce31e9a4b3746274533ebc33606d4f53e2"
+  integrity sha512-odLqlRKuu1UuVDuZbfmOE/zXVhowqOh37FCChJme6AXcpczgc8lSGEzWI5pok6qxLd9JcxN/kvFEJR3SfA5b1A==
+
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"

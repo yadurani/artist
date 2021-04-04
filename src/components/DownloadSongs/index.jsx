@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { songs } from '../../constants/initialState'
 import {
   DownloadItemWrapper,
@@ -12,10 +12,21 @@ import { Body1 } from '../Common/Text/Body'
 import { BodyBase } from '../Common/Text/Body/styles'
 import { TitleDownload } from '../Common/CompositeText'
 import DownloadSongsItem from './DownloadSongsItem'
+import { AppContext } from '../../context/AppContext'
 
 const DownloadSongs = () => {
+  const {
+    playingAudio,
+    hasPlaying,
+    state: { mediaCurrent },
+    songsRef,
+  } = useContext(AppContext)
+
+  const playMedia = (song) => () => playingAudio(song)
+  const isPlaying = (song) => song?.id === mediaCurrent.id
+
   return (
-    <SectionWrapper>
+    <SectionWrapper ref={songsRef}>
       <SubHeader>
         <HeadlineBase as={Headline2} text={<TitleDownload />} />
         <BodyBase
@@ -24,9 +35,13 @@ const DownloadSongs = () => {
         />
       </SubHeader>
       <DownloadWrapper>
-        {songs?.map((song, i) => (
-          <DownloadItemWrapper key={song.img + i}>
-            <DownloadSongsItem {...song} />
+        {songs?.map((song) => (
+          <DownloadItemWrapper key={song.id}>
+            <DownloadSongsItem
+              {...song}
+              onClick={playMedia(song)}
+              hasPlaying={isPlaying(song) && hasPlaying}
+            />
           </DownloadItemWrapper>
         ))}
       </DownloadWrapper>
