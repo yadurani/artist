@@ -45,6 +45,7 @@ export const PlayerWrapper = styled.div`
     position: static;
     padding: 40px 30px;
     width: calc(100% - 60px);
+    justify-content: center;
   }
 `
 
