@@ -27,11 +27,11 @@ const SoundTrack = () => {
         <BodyBase as={Body1} text={<ParagraphSound />} mb={1.5} />
         <SoundTrackImages>
           <SoundTrackPicture>
-            <SoundTrackSource src="images/card-4.jpg (max-width: 560px)" />
+            <SoundTrackSource srcset="images/card-4.jpg (max-width: 560px)" />
             <SoundTrackImg src="images/card-6.jpg" alt="Imagen 1" />
           </SoundTrackPicture>
           <SoundTrackPicture>
-            <SoundTrackSource src="images/card-6.jpg (max-width: 560px)" />
+            <SoundTrackSource srcset="images/card-6.jpg (max-width: 560px)" />
             <SoundTrackImg src="images/card-5.jpg" alt="Imagen 1" />
           </SoundTrackPicture>
           <SoundTrackPicture>

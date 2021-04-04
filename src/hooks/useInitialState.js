@@ -16,6 +16,7 @@ const useInitialState = () => {
     clearInterval(intervalRef.current)
     intervalRef.current = setInterval(() => {
       if (audioCurrent.current.ended) {
+        console.log('Entro')
         setHasPlaying(false)
       }
     }, [1000])
@@ -27,6 +28,11 @@ const useInitialState = () => {
       startTimer()
     } else {
       audioCurrent.current.pause()
+    }
+    return () => {
+      // eslint-disable-next-line
+      audioCurrent.current.pause()
+      clearInterval(intervalRef.current)
     }
   }, [hasPlaying])
 
@@ -51,12 +57,6 @@ const useInitialState = () => {
     }
   }
 
-  useEffect(() => {
-    return () => {
-      audioCurrent.current.pause()
-      clearInterval(intervalRef.current)
-    }
-  }, [])
   return { state, playingAudio, volumeAudio, hasPlaying, hasVolume }
 }
 

@@ -14,6 +14,7 @@ const useSlider = (slides, el) => {
   useEffect(() => {
     const getWidth = () => el?.current.clientWidth
     setWidth(getWidth())
+    // eslint-disable-next-line
   }, [width])
 
   const nextSlide = () => {

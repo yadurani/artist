@@ -59,7 +59,8 @@ export const SlideWrapper = styled.div`
   }
 `
 export const SlideImage = styled.img`
-  width: auto;
+  width: 646px;
+  height: 646px;
   @media (max-width: 740px) {
     max-width: calc(100vw - 60px);
     max-height: calc(100vw - 60px);
