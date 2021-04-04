@@ -1,21 +1,32 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Icon from '../Icon'
 import { Body1 } from '../Text/Body'
 import { BodyBase } from '../Text/Body/styles'
 import { MuteButton, PlayerButton, PlayerWrapper } from './styles'
+import { AppContext } from '../../../context/AppContext'
 
-const FloatPlayer = ({ player }) => {
+const FloatPlayer = () => {
+  const {
+    playingAudio,
+    volumeAudio,
+    hasPlaying,
+    hasVolume,
+    state,
+  } = useContext(AppContext)
+  const { mediaCurrent } = state
+  const action = hasPlaying ? 'Pause' : 'Play'
+  const nameIconPlay = hasPlaying ? 'pause' : 'playFill'
+  const nameIconVolume = hasVolume ? 'volume' : 'mute'
   return (
     <PlayerWrapper>
       <Icon name="frame" />
-      <PlayerButton type="button" title="Play">
-        <Icon name="playFill" />
+      <PlayerButton type="button" title={action} onClick={playingAudio}>
+        <Icon name={nameIconPlay} />
       </PlayerButton>
-      <BodyBase as={Body1} text="D Fine Us / Howling at the Moon" />
-      <MuteButton type="button" title="Volume">
-        <Icon name="volume" />
+      <BodyBase as={Body1} text={mediaCurrent.name} />
+      <MuteButton type="button" title="Volume" onClick={volumeAudio}>
+        <Icon name={nameIconVolume} />
       </MuteButton>
-      {player}
     </PlayerWrapper>
   )
 }

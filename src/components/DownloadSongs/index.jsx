@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '../../constants/initialState'
+import { songs } from '../../constants/initialState'
 import {
   DownloadItemWrapper,
   DownloadWrapper,
@@ -24,7 +24,7 @@ const DownloadSongs = () => {
         />
       </SubHeader>
       <DownloadWrapper>
-        {data?.songs?.map((song, i) => (
+        {songs?.map((song, i) => (
           <DownloadItemWrapper key={song.img + i}>
             <DownloadSongsItem {...song} />
           </DownloadItemWrapper>

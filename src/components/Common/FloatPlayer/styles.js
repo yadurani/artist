@@ -28,6 +28,7 @@ export const PlayerButton = styled.button`
   border: none;
   padding-right: 1rem;
   cursor: pointer;
+  width: 40px;
   &:focus {
     outline: none;
   }

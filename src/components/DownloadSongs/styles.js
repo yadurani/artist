@@ -62,6 +62,7 @@ export const DownloadImg = styled.img`
 `
 
 export const DownloadOverlay = styled.div`
+  ${fadeIn};
   background: rgba(11, 11, 11, 0.5);
   bottom: 0;
   content: '';
