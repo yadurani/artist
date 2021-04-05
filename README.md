@@ -4,7 +4,7 @@
 
 ## Demo 🚀
 
-[View Demo]()
+[View Demo](https://yadurani.github.io/artist/)
 
 ## Project 💻
 
