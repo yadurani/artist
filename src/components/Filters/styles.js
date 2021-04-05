@@ -65,9 +65,21 @@ export const SlideImage = styled.img`
   width: 646px;
   height: 646px;
   @media (max-width: 740px) {
+    width: calc(100vw);
+    height: calc(100vw);
+    object-fit: contain;
+  }
+  @media (max-width: 560px) {
     max-width: calc(100vw - 60px);
     max-height: calc(100vw - 60px);
     object-fit: contain;
+  }
+`
+export const FiltersContainer = styled.div`
+  width: 646px;
+  margin: auto;
+  @media (max-width: 740px) {
+    width: 100%;
   }
 `
 

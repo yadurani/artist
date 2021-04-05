@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const useSlider = (slides, el) => {
+  const imgWidth = useRef()
   const [width, setWidth] = useState(null)
   const [state, setState] = useState({
     activeIndex: 0,
@@ -10,12 +11,13 @@ const useSlider = (slides, el) => {
   const { activeIndex, transition } = state
   const disabledNext = activeIndex === slides.length - 1
   const disabledBack = activeIndex === 0
+  const getWidth = () => imgWidth?.current.clientWidth
 
   useEffect(() => {
-    const getWidth = () => el?.current.clientWidth
     setWidth(getWidth())
     // eslint-disable-next-line
   }, [width])
+  console.log('🚀 ~ file: useSlider.js ~ line 20 ~ useSlider ~ width', width)
 
   const nextSlide = () => {
     setState((prevState) => ({
@@ -42,9 +44,10 @@ const useSlider = (slides, el) => {
   }
 
   const handleResize = () => {
+    setWidth(getWidth())
     setState((prevState) => ({
       ...prevState,
-      translate: width,
+      translate: getWidth(),
       transition: 0,
     }))
   }
@@ -64,6 +67,7 @@ const useSlider = (slides, el) => {
     disabledNext,
     disabledBack,
     handleNav,
+    imgWidth,
   }
 }
 
